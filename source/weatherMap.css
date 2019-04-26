@@ -67,6 +67,9 @@ h4 {
 #Earth {
   display: none;
 }
+#Earth2 {
+  display: none;
+}
 #firstSun {
   display: block;
   width: 60%;
@@ -120,9 +123,18 @@ h4 {
     min-height: 100vh;  /* needed to make sure body fills up window */
   }
   #gradient {
+    display: flex;
+    flex-direction: row;
     background-image: linear-gradient(rgb(73,138,220), rgb(98,59,156));
+
     /*padding-bottom: 5%;*/
-    margin-bottom: 10%;
+    /*margin-bottom: 10%;*/
+  }
+
+  #notEarth2 {
+    display: flex;
+    flex-direction: column;
+
   }
   header {
     display: flex;
@@ -135,7 +147,7 @@ h4 {
     padding-top: 4.5%;
     padding-left: 14%;
     padding-right: 14%;
-    height: 50vh;
+    height: 53vh;
   }
   button {
     border: none;
@@ -153,11 +165,11 @@ h4 {
     display: flex;
     flex-direction: row;
     font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
-    font-size: 5vw;
+    font-size: 3.9vw;
     color: white;
     text-align: center;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 4%;
+    padding-right: 4%;
     padding-top: 8%;
     padding-bottom: 2%;
   }
@@ -173,7 +185,7 @@ h4 {
   }
   h3 {
     font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
-    font-size: 4vw;
+    font-size: 3.5vw;
     color: rgb(3,19,109);
   }
   #forecast {
@@ -214,7 +226,10 @@ h4 {
     display: block;
     padding-left: 10%;
     flex: 1;
-
+  }
+  #Earth2 {
+    display: none;
+    flex: 0;
   }
   #firstSun {
     display: block;
@@ -325,17 +340,244 @@ h4 {
  /****************************Standard Web*************************************/
 @media screen and (min-width: 780px) {
   body {
-      min-height: 100vh;  /* needed to make sure body fills up window */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* needed to make sure body fills up window */
+  }
+  #gradient {
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(rgb(73,138,220), rgb(98,59,156));
+    justify-content: space-between;
+    /*padding-bottom: 5%;*/
+    /*margin-bottom: 10%;*/
+  }
+  #notEarth2 {
+    flex:2;
+  }
+  #Earth2 {
+
   }
   header {
-    /*display: flex;*/
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;*/
+    padding-bottom: 0%;
+
+    align-items: flex-start;
   }
   main {
-    /*font-family: montserrat, sans-serif; font-weight: 200; font-style: normal;
-    display: none;
+    padding-top: 4.5%;
+    padding-left: 10.5%;
+    padding-right: 14%;
+    height: 50vh;
+  }
+  button {
+    border: none;
+    background-color: rgb(100, 120, 229);
+    color: white;
+    font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
+    padding: 2% 5%;
+    margin-left: 4%;
+  }
+  footer {
+
+  }
+
+  #local {
+    display: flex;
+    flex-direction: row;
+    font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
+    font-size: 3.4vw;
+    color: white;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 8%;
+    padding-bottom: 2%;
+    width:100%;
+  }
+  h1 {
+    padding-left: 9%;
+    padding-right: 0%;
+    text-align: left;
+  }
+  h2 {
+    text-align: left;
+  }
+  #cityInput {
+    background-color: rgb(3,19,109);
+    border: none;
+    color: white;
+    padding-right: 0%;
+    /*width: 90%;*/
+  }
+  h3 {
+    font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
+    font-size: 2.6vw;
+    color: rgb(3,19,109);
+    text-align: left;
+    padding-left: 10.5%;
+  }
+  #forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    font-size: 5vw;
+  }
+  h4 {
+    font-family: IBM Plex Sans, sans-serif; font-weight: 500; font-style: normal;
+    /*font-size: 1.5vw;*/
+    color: white;
+    text-align:left;
+    padding-bottom: 0%;
+    padding-right: 2%;
+  }
+  /*#cityAndButton {
+    display: flex;
+    flex-direction: row;
+  }*/
+  #weatherAndEarth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #weather {
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    padding-top:12%;
+    padding-bottom:15%;
     align-items: center;
-    flex:  0 1 auto;*/
+    font-family: Saira Extra Condensed, sans-serif; font-weight: 300; font-style: normal;
+    color: white;
+    width: 50%;
+    flex: 1;
+  }
+  #Earth {
+    display: none;
+    padding-left: 10%;
+    flex: 1;
+
+  }
+  #Earth2 {
+    display: block;
+    width: 50%;
+    height: auto;
+    padding-bottom: 10%;
+    flex:1;
+    padding-right: 7%;
+    padding-left: 3%;
+  }
+
+  #firstSun {
+    display: none;
+    width: 60%;
+    height: auto;
+    padding-bottom: 12%;
+  }
+  #secondSun {
+    display: block;
+    width: 30%;
+    padding-left: 6%;
+    padding-right: 5%;
+  }
+  #info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #verticalBar {
+    display: none;
+    color: black;
+    font-size: 14vw;
+    padding-left: 5%;
+    font-weight: 300;
+  }
+  #current {
+    font-size: 3.0vw;
+    text-align: center;
+  }
+  #txt1 {
+    padding-bottom:10%;
+  }
+  #temperature {
+    font-size: 7vw;
+    text-align: center;
+  }
+  #carrot {
+    display: none;
+    padding-top: 4%;
+    text-align: center;
+    font-family: Saira Extra Condensed, sans-serif; font-weight: 300; font-style: normal;
+    color: white;
+    font-size: 20vw;
+  }
+  #fiveDay {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    font-family: Saira Extra Condensed, sans-serif; font-weight: 300; font-style: normal;
+    align-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+
+  }
+  #day1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+  }
+  #day2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+  }
+  #day3 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+  }
+  #day4 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(100, 100, 100);
+  }
+  #day5 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+  }
+  .time {
+    font-size: 2.9vw;
+    padding-bottom: 15%;
+    padding-top: 13%;
+  }
+  .dayTemp {
+    font-size: 6vw;
+    padding-top: 15%;
+    padding-bottom: 20%;
+  }
+  .daysvg {
+    width: 40%;
   }
 }
