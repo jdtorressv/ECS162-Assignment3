@@ -70,13 +70,13 @@ h4 {
 #Earth2 {
   display: none;
 }
-#firstSun {
+.firstSun {
   display: block;
   width: 60%;
   height: auto;
   padding-bottom: 12%;
 }
-#secondSun {
+.secondSun {
   display: none;
 }
 #info {
@@ -98,7 +98,7 @@ h4 {
 #txt1 {
   padding-bottom:10%;
 }
-#temperature {
+#current-temp1 {
   font-size: 23vw;
   text-align: center;
 }
@@ -231,13 +231,13 @@ h4 {
     display: none;
     flex: 0;
   }
-  #firstSun {
+  .firstSun {
     display: block;
     width: 60%;
     height: auto;
     padding-bottom: 12%;
   }
-  #secondSun {
+  .secondSun {
     display: none;
   }
   #info {
@@ -259,7 +259,7 @@ h4 {
   #txt1 {
     padding-bottom:10%;
   }
-  #temperature {
+  #current-temp1 {
     font-size: 15vw;
     text-align: center;
   }
@@ -498,10 +498,14 @@ h4 {
     font-size: 3.0vw;
     text-align: center;
   }
+  #current-temp0 {
+    align-items: center;
+    font-size:6vw;
+  }
   #txt1 {
     padding-bottom:10%;
   }
-  #temperature {
+  #current-temp1 {
     font-size: 7vw;
     text-align: center;
   }
@@ -573,7 +577,7 @@ h4 {
     padding-top: 13%;
   }
   .dayTemp {
-    font-size: 6vw;
+    font-size: 8vw;
     padding-top: 15%;
     padding-bottom: 20%;
   }
